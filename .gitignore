@@ -1,0 +1,8 @@
+# Nichts Privates soll versehentlich mit hochgeladen werden
+.DS_Store
+*.xlsx
+*.numbers
+*.pdf
+privat/
+notizen/
+*.zip

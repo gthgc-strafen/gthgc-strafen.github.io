@@ -1,0 +1,133 @@
+{
+  "_hinweis": "Einzige Quelle fuer Regeln UND Berechnung. 'strafen' = Anzahl Strafen. 'formel': fest = immer gleich viel; pro_menge = strafen * Menge; pro_5min = aufgerundet auf angefangene 5 Minuten; sachleistung = kein Geldbetrag.",
+  "satz_euro": 0.5,
+  "satz_text": { "de": "0,50 € pro Strafe", "en": "0.50 € per fine" },
+
+  "regeln": [
+    { "nr": "1", "strafen": 1, "formel": "pro_menge", "einheit": "Minuten", "karte": "",
+      "de": { "text": "Verspätung Training / Trainingsspiel", "strafe": "1 Strafe / Minute" },
+      "en": { "text": "Delay training / training match", "strafe": "1 fine / minute" } },
+
+    { "nr": "2", "strafen": 5, "formel": "pro_5min", "einheit": "Minuten", "karte": "",
+      "de": { "text": "Verspätung Spieltag", "strafe": "5 Strafen / angefangene 5 Min." },
+      "en": { "text": "Delay matchday", "strafe": "5 fines / started 5 min" } },
+
+    { "nr": "3", "strafen": 5, "formel": "pro_menge", "einheit": "Tage", "karte": "",
+      "de": { "text": "Fristen nicht eingehalten", "strafe": "5 Strafen / Tag" },
+      "en": { "text": "Failure to meet deadlines", "strafe": "5 fines / day" } },
+
+    { "nr": "4", "strafen": 100, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Unentschuldigtes Fehlen bei Pflichtterminen (inkl. Schiedsrichtereinsätzen)", "strafe": "100 Strafen" },
+      "en": { "text": "Unexcused absence from mandatory appointments (incl. umpiring)", "strafe": "100 fines" } },
+
+    { "nr": "5", "strafen": 10, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Handynutzung oder -klingeln während Besprechungen", "strafe": "10 Strafen" },
+      "en": { "text": "Use or ringing of mobile phone during meetings", "strafe": "10 fines" } },
+
+    { "nr": "6", "strafen": 10, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Verantwortungsaufgabe nicht erfüllt (Training / Trainingsspiel)", "strafe": "10 Strafen" },
+      "en": { "text": "Responsible task not fulfilled (training / training match)", "strafe": "10 fines" } },
+
+    { "nr": "7", "strafen": 30, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Verantwortungsaufgabe nicht erfüllt (Spieltag)", "strafe": "30 Strafen" },
+      "en": { "text": "Responsible task not fulfilled (matchday)", "strafe": "30 fines" } },
+
+    { "nr": "8", "strafen": 20, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Verantwortungsaufgabe nicht erfüllt (Sonstiges)", "strafe": "20 Strafen" },
+      "en": { "text": "Responsible task not fulfilled (others)", "strafe": "20 fines" } },
+
+    { "nr": "9", "strafen": 25, "formel": "fest", "einheit": null, "karte": "g",
+      "de": { "text": "Grüne Karte für Meckern / Ballspielen nach dem Pfiff", "strafe": "25 Strafen" },
+      "en": { "text": "Green card for complaining / playing ball after whistle", "strafe": "25 fines" } },
+
+    { "nr": "10", "strafen": 40, "formel": "fest", "einheit": null, "karte": "y",
+      "de": { "text": "Gelbe Karte für Foulspiel", "strafe": "40 Strafen" },
+      "en": { "text": "Yellow card for fouling", "strafe": "40 fines" } },
+
+    { "nr": "11", "strafen": 100, "formel": "fest", "einheit": null, "karte": "y",
+      "de": { "text": "Gelbe Karte für Meckern", "strafe": "100 Strafen" },
+      "en": { "text": "Yellow card for complaining", "strafe": "100 fines" } },
+
+    { "nr": "12", "strafen": 0, "formel": "sachleistung", "einheit": null, "karte": "r",
+      "de": { "text": "Rote Karte", "strafe": "Grillen für die Mannschaft" },
+      "en": { "text": "Red card", "strafe": "BBQ for the team" } },
+
+    { "nr": "13", "strafen": 5, "formel": "pro_menge", "einheit": "Teile", "karte": "",
+      "de": { "text": "Falsche Kleidung Trainingsspiel (sobald ausgestattet)", "strafe": "5 Strafen / Teil" },
+      "en": { "text": "Wrong clothes training match (once equipped)", "strafe": "5 fines / piece" } },
+
+    { "nr": "14", "strafen": 10, "formel": "pro_menge", "einheit": "Teile", "karte": "",
+      "de": { "text": "Falsche Kleidung Anreise Spieltag", "strafe": "10 Strafen / Teil" },
+      "en": { "text": "Wrong clothes travelling matchday", "strafe": "10 fines / piece" } },
+
+    { "nr": "15", "strafen": 20, "formel": "pro_menge", "einheit": "Teile", "karte": "",
+      "de": { "text": "Falsche Kleidung Spieltag", "strafe": "20 Strafen / Teil" },
+      "en": { "text": "Wrong clothes matchday", "strafe": "20 fines / piece" } },
+
+    { "nr": "15b", "strafen": 30, "formel": "pro_menge", "einheit": "Teile", "karte": "", "versteckt": true,
+      "de": { "text": "Kleidungsstück komplett vergessen (Sonderfall zu Nr. 15)", "strafe": "30 Strafen / Teil" },
+      "en": { "text": "Kit forgotten entirely (special case of No. 15)", "strafe": "30 fines / piece" } },
+
+    { "nr": "16", "strafen": 10, "formel": "pro_menge", "einheit": "Monate", "karte": "",
+      "de": { "text": "Strafen nicht bezahlt", "strafe": "10 Strafen / Monat" },
+      "en": { "text": "Fines not paid", "strafe": "10 fines / month" } },
+
+    { "nr": "17", "strafen": 5, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Parken am HW-Platz", "strafe": "5 Strafen" },
+      "en": { "text": "Parking at the HW pitch", "strafe": "5 fines" } },
+
+    { "nr": "18", "strafen": 2, "formel": "pro_menge", "einheit": "Teile", "karte": "",
+      "de": { "text": "Emblem eines anderen Hamburger Hockeyvereins im Training", "strafe": "2 Strafen / Teil" },
+      "en": { "text": "Emblem of another Hamburg hockey club in training", "strafe": "2 fines / piece" } },
+
+    { "nr": "19", "strafen": 5, "formel": "pro_menge", "einheit": "Nachrichten", "karte": "",
+      "de": { "text": "Nicht-Orga-Nachrichten in der Orga-Gruppe („#Orga“ legitimiert nicht)", "strafe": "5 Strafen / Nachricht" },
+      "en": { "text": "Non-Orga messages to the orga group (“#Orga” doesn’t legitimize)", "strafe": "5 fines / message" } },
+
+    { "nr": "20", "strafen": 20, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Rauchen im Trikot oder mit Flottbek-Emblem", "strafe": "20 Strafen" },
+      "en": { "text": "Smoking in jersey or with Flottbek emblem", "strafe": "20 fines" } },
+
+    { "nr": "21", "strafen": 20, "formel": "fest", "einheit": null, "karte": "",
+      "de": { "text": "Schlägerwerfen in Training / Trainingsspielen / Spielen", "strafe": "20 Strafen" },
+      "en": { "text": "Stick throwing in training / training matches / matches", "strafe": "20 fines" } }
+  ],
+
+  "creed": {
+    "de": [
+      "Die Kapitänsrunde behält sich Ergänzungen und Sonderregelungen vor.",
+      "<strong>Wir sind eine Mannschaft:</strong> Der Katalog beruht auf Zusammenarbeit und vereinbarten Verhaltensweisen. Es geht nicht darum, einander zu bestrafen, herabzusetzen oder gegeneinander zu arbeiten – sondern zum Beispiel darum, Sachen für andere mitzunehmen und Strafen proaktiv zu vermeiden."
+    ],
+    "en": [
+      "The captains group reserves the right to make additions or special provisions.",
+      "<strong>We are a team:</strong> the spirit of the catalog is based on cooperation and agreed behaviours. It is not about punishing, denigrating or opposing each other – for example, taking things along for others and being proactive to avoid penalties."
+    ]
+  },
+
+  "remarks": {
+    "de": [
+      { "titel": "Verspätungen", "punkte": [
+        { "t": "Verspätungen sind der Mannschaft und den Trainern so früh wie möglich mitzuteilen – <u>mindestens 60 Minuten vor Beginn</u>.",
+          "sub": ["Verkehr oder Probleme mit dem ÖPNV sind keine gültigen Entschuldigungen; in kritischen Fällen entscheiden Kapitäne und Trainer."] },
+        { "t": "Pünktlichkeit gilt für alle Termine und Treffpunkte – nicht nur fürs Training." },
+        { "t": "Pünktlich sein heißt: Aufwärmen um 18:45 Uhr ist nicht dasselbe wie Ankunft um 18:45 Uhr." }
+      ]},
+      { "titel": "Kleidung", "punkte": [
+        { "t": "Bei Trainingsspielen wird in der Regel milde geurteilt, es sollte aber Flottbek-Kleidung sein." },
+        { "t": "Nr. 15: Spielen unter falschem Namen mit korrektem Trikot zählt als Kleidungsverstoß. Ein komplett vergessenes Kleidungsstück kostet 30 Strafen pro Teil." }
+      ]}
+    ],
+    "en": [
+      { "titel": "Delays", "punkte": [
+        { "t": "Announcements of delays should be communicated to the team and coaches as early as possible <u>(at least 60 min before the start)</u>.",
+          "sub": ["Traffic issues or public transport problems are not valid excuses; captains and coaches decide in critical cases."] },
+        { "t": "Punctuality is expected for all appointments and meeting points – not just for training." },
+        { "t": "Arrive on time: e.g. warm-up 6:45 p.m. is not the same as arrival 6:45 p.m." }
+      ]},
+      { "titel": "Clothes", "punkte": [
+        { "t": "For training matches, a mild judgment is generally applied, but it should be Flottbek clothing." },
+        { "t": "Reg No. 15: Playing under the wrong name with the correct jersey counts as a kit violation. Forgetting a kit entirely incurs a 30-fine penalty per piece." }
+      ]}
+    ]
+  }
+}

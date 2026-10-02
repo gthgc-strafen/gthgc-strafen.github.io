@@ -1,0 +1,17 @@
+# Laufendes Verstoss-Log. Eine Zeile pro Verstoss, Trennzeichen Semikolon.
+#
+# Spalten:  datum;name;regel;menge;notiz
+#   datum  TT.MM.JJJJ
+#   name   muss exakt so in data/spieler.json stehen
+#   regel  Nummer aus dem Katalog (1-21, dazu 15b fuer komplett vergessenes Kleidungsstueck)
+#   menge  nur bei Regeln mit Einheit: 1 Minuten, 2 Minuten, 3 Tage,
+#          13/14/15/15b/18 Teile, 16 Monate, 19 Nachrichten. Sonst leer lassen.
+#   notiz  optional, erscheint nicht auf der Seite
+#
+# Beispiele (diese Zeilen sind auskommentiert und zaehlen nicht mit):
+# 15.08.2026;Jan;1;6;sechs Minuten zu spaet
+# 17.08.2026;Levi;15;2;Stutzen und Hose
+# 17.08.2026;Klaudi;11;;
+#
+# Zeilen, die mit # beginnen, werden ignoriert. Echte Eintraege ab hier:
+datum;name;regel;menge;notiz
