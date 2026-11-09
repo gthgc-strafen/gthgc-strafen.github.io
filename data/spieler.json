@@ -4,7 +4,7 @@
 
   "spieler": [
     { "name": "Klaudi",     "uebertrag": 0, "bezahlt": false, "hinweis": "" },
-    { "name": "Achraf",     "uebertrag": 0, "bezahlt": false, "hinweis": "" },
+    { "name": "Lutschi",    "uebertrag": 0, "bezahlt": false, "hinweis": "" },
     { "name": "William",    "uebertrag": 0, "bezahlt": false, "hinweis": "" },
     { "name": "Leruo",      "uebertrag": 0, "bezahlt": false, "hinweis": "" },
     { "name": "Johnny",     "uebertrag": 0, "bezahlt": true, "hinweis": "" },

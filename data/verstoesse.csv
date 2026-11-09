@@ -34,12 +34,12 @@ datum;name;regel;menge;notiz
 30.09.2026;Chipo;1;5;zu spaet Fototermin, notiert als Caleb, Datum unbekannt
 30.09.2026;Dycke;1;1;zu spaet Fototermin, Datum unbekannt
 30.09.2026;Jakob;1;9;zu spaet Fototermin, Datum unbekannt
-30.09.2026;Achraf;1;2;zu spaet Fototermin, notiert als Louis, Datum unbekannt
+30.09.2026;Lutschi;1;2;zu spaet Fototermin, notiert als Louis, Datum unbekannt
 30.09.2026;Diede;1;2;zu spaet Fototermin, Datum unbekannt
 30.09.2026;William;1;2;zu spaet Fototermin, Datum unbekannt
-30.09.2026;Achraf;18;1;Polo-Trikot, notiert als Louis, Datum unbekannt
-30.09.2026;Achraf;2;5;zu spaet Spieltag (zweimal notiert, ein Spieltag), notiert als Louis, Datum unbekannt
-30.09.2026;Achraf;15b;1;falsche Kleidung Buli (30 notiert), notiert als Louis, Datum unbekannt
+30.09.2026;Lutschi;18;1;Polo-Trikot, notiert als Louis, Datum unbekannt
+30.09.2026;Lutschi;2;5;zu spaet Spieltag (zweimal notiert, ein Spieltag), notiert als Louis, Datum unbekannt
+30.09.2026;Lutschi;15b;1;falsche Kleidung Buli (30 notiert), notiert als Louis, Datum unbekannt
 30.09.2026;Johnny;2;5;zu spaet Spieltag, Datum unbekannt
 30.09.2026;William;2;5;zu spaet Spieltag, Datum unbekannt
 30.09.2026;Jan;2;5;delay matchday, Datum unbekannt
@@ -54,3 +54,7 @@ datum;name;regel;menge;notiz
 30.09.2026;Chipo;9;;Gruene Karte, Datum unbekannt
 30.09.2026;Risky;9;;Gruene Karte, Datum unbekannt
 30.09.2026;Risky;9;;zweite Gruene Karte, Datum unbekannt
+13.10.2026;William;1;2;Verspaetung wegen Duschen
+13.10.2026;Samir;1;2;Verspaetung wegen Duschen
+13.10.2026;Michael;1;2;Verspaetung wegen Duschen
+30.10.2026;William;11;;Gelbe Karte fuers Meckern, Datum unbekannt (von Online-Version 30.10. uebernommen)
