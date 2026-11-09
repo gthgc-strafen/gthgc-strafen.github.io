@@ -6,3 +6,6 @@
 privat/
 notizen/
 *.zip
+*recovery-codes*
+*.txt
+!requirements.txt
