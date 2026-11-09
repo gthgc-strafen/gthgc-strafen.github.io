@@ -15,3 +15,42 @@
 #
 # Zeilen, die mit # beginnen, werden ignoriert. Echte Eintraege ab hier:
 datum;name;regel;menge;notiz
+11.08.2026;Linus;1;1;zu spaet
+11.08.2026;Jussi;1;1;zu spaet
+05.09.2026;Raoul;2;15;zu spaet Berlin
+16.09.2026;Casper;18;1;Polo-Trikot (Gesamtentscheidung 30 Strafen)
+16.09.2026;Casper;1;28;mehrfach zu spaet ohne Bescheid, zusammengefasst (Gesamtentscheidung 30 Strafen)
+29.09.2026;William;1;6;zu spaet Video
+29.09.2026;Levi;1;6;zu spaet Video
+29.09.2026;Jan;1;5;zu spaet Video
+29.09.2026;Bench;1;4;zu spaet Video (notiert als Benja)
+29.09.2026;Johnny;1;2;zu spaet Video
+29.09.2026;Samir;1;3;zu spaet Video
+29.09.2026;Jussi;1;3;zu spaet Video
+30.09.2026;Lenn;1;5;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Jan;1;5;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Düse;1;5;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Michael;1;5;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Chipo;1;5;zu spaet Fototermin, notiert als Caleb, Datum unbekannt
+30.09.2026;Dycke;1;1;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Jakob;1;9;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Achraf;1;2;zu spaet Fototermin, notiert als Louis, Datum unbekannt
+30.09.2026;Diede;1;2;zu spaet Fototermin, Datum unbekannt
+30.09.2026;William;1;2;zu spaet Fototermin, Datum unbekannt
+30.09.2026;Achraf;18;1;Polo-Trikot, notiert als Louis, Datum unbekannt
+30.09.2026;Achraf;2;5;zu spaet Spieltag (zweimal notiert, ein Spieltag), notiert als Louis, Datum unbekannt
+30.09.2026;Achraf;15b;1;falsche Kleidung Buli (30 notiert), notiert als Louis, Datum unbekannt
+30.09.2026;Johnny;2;5;zu spaet Spieltag, Datum unbekannt
+30.09.2026;William;2;5;zu spaet Spieltag, Datum unbekannt
+30.09.2026;Jan;2;5;delay matchday, Datum unbekannt
+30.09.2026;Justus H.;2;5;zu spaet Spieltag, notiert als Hautzel, Datum unbekannt
+30.09.2026;Samir;19;1;Orga-Gruppe, Datum unbekannt
+29.09.2026;Risky;1;1;zu spaet Video (notiert als Robin)
+08.09.2026;Samir;1;10;zu spaet Bescheid gegeben, dass er zu spaet ist (keine eigene Regel, als 10 Min. gebucht)
+30.09.2026;Glassfaser;2;5;Trikot auf dem Zimmer vergessen, zu spaet bei Abfahrt, Datum unbekannt
+30.09.2026;Johnny;2;5;zweite Verspaetung Spieltag, Datum unbekannt
+30.09.2026;Levi;1;5;Fototermin verpasst (keine eigene Regel, als 5 Min. gebucht), Datum unbekannt
+30.09.2026;Samir;2;20;zu spaet bei Abfahrt nach Neuss, Datum unbekannt
+30.09.2026;Chipo;9;;Gruene Karte, Datum unbekannt
+30.09.2026;Risky;9;;Gruene Karte, Datum unbekannt
+30.09.2026;Risky;9;;zweite Gruene Karte, Datum unbekannt

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Strafenkasse · GTHGC 1. Herren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1B33;
+    --ink-60:#5A6B80;
+    --paper:#FFFFFF;
+    --field:#EDF1F5;
+    --line:#C9D4E0;
+    --accent:#1B4F8A;
+    --green:#1E8A4C;
+    --yellow:#D9A114;
+    --red:#C42B1C;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--field);color:var(--ink);
+    font-family:"Barlow",system-ui,-apple-system,sans-serif;
+    font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:min(880px,100%);margin:0 auto;padding:0 16px 60px}
+
+  /* ---------- Kopf ---------- */
+  header{
+    background:var(--ink);color:#fff;margin:0 -16px 0;
+    padding:26px 16px 22px;position:relative;overflow:hidden;
+  }
+  .stripes{position:absolute;inset:0;display:flex;opacity:.15;pointer-events:none}
+  .stripes span{flex:1;background:#fff}
+  .stripes span:nth-child(even){background:transparent}
+  .kicker{
+    font-family:"Barlow Condensed",sans-serif;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;
+    color:#8FB4DC;margin:0 0 2px;position:relative;
+  }
+  h1{
+    font-family:"Barlow Condensed",sans-serif;font-weight:700;
+    font-size:clamp(2rem,8vw,2.9rem);line-height:.98;letter-spacing:-.01em;
+    margin:0;position:relative;text-transform:uppercase;
+  }
+  .stand{
+    position:relative;margin-top:14px;padding-top:12px;
+    border-top:1px solid rgba(255,255,255,.22);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:16px;
+    font-size:.84rem;color:#B9CBE0;
+  }
+  .pot{
+    text-align:right;line-height:1;flex:none;
+    display:flex;flex-direction:column;align-items:flex-end;gap:6px;
+  }
+  .pot img{
+    width:52px;height:auto;display:block;
+    filter:drop-shadow(0 1px 3px rgba(0,0,0,.35));
+  }
+  .pot b{
+    display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+    font-size:2.1rem;color:#fff;font-variant-numeric:tabular-nums;
+  }
+  .pot span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- Zahlung ---------- */
+  .pay{
+    background:var(--paper);border:1px solid var(--line);border-top:0;
+    border-radius:0 0 6px 6px;margin:0 0 16px;padding:14px 16px 0;
+  }
+  .pay .lbl{
+    display:block;font-family:"Barlow Condensed",sans-serif;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;font-size:.7rem;
+    color:var(--accent);margin-bottom:6px;
+  }
+  .payline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+  .payline .adr{
+    font-weight:600;font-size:1.05rem;letter-spacing:-.01em;
+    word-break:break-all;flex:1 1 auto;min-width:0;
+  }
+  .payline button{
+    flex:none;padding:8px 15px;border:1px solid var(--accent);border-radius:5px;
+    background:var(--accent);color:#fff;font:inherit;font-size:.88rem;font-weight:500;
+    cursor:pointer;transition:background .15s ease;
+  }
+  .payline button:hover{background:#16406F}
+  .payline button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .payline button.ok{background:var(--green);border-color:var(--green)}
+  .pay .hint{font-size:.82rem;color:var(--ink-60);margin:8px 0 0}
+  .pay .hint b{color:var(--ink);font-weight:600}
+
+  .maka{
+    margin:14px -16px 0;padding:12px 16px;
+    background:var(--field);border-top:1px solid var(--line);
+    border-radius:0 0 5px 5px;
+  }
+  .maka .lbl{color:var(--ink);margin-bottom:5px}
+  .maka p{margin:0;font-size:.9rem;line-height:1.4}
+  .maka .tarife{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .tarif{
+    background:var(--paper);border:1px solid var(--line);border-radius:5px;
+    padding:7px 12px;font-size:.86rem;line-height:1.25;
+  }
+  .tarif b{
+    display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+    font-size:1.25rem;color:var(--accent);font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- Reiter ---------- */
+  .tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+  .tabs button{
+    flex:1;padding:11px 8px;background:none;border:0;border-bottom:3px solid transparent;
+    font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:1.05rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--ink-60);
+    cursor:pointer;margin-bottom:-1px;transition:color .15s ease,border-color .15s ease;
+  }
+  .tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+  .tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+  .panel[hidden]{display:none}
+
+  /* ---------- Suche ---------- */
+  .search{
+    width:100%;padding:12px 14px;margin-bottom:16px;
+    border:1px solid var(--line);border-radius:6px;background:var(--paper);
+    font-family:inherit;font-size:1rem;color:var(--ink);
+  }
+  .search::placeholder{color:var(--ink-60)}
+  .search:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+
+  /* ---------- Spielerliste ---------- */
+  .row{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    margin-bottom:8px;overflow:hidden;
+  }
+  .row.clear{opacity:.55}
+  .head{
+    display:grid;grid-template-columns:32px 1fr auto 16px;
+    align-items:center;gap:12px;width:100%;padding:13px 14px;
+    background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer;
+  }
+  .head:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .rank{
+    font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.4rem;
+    color:var(--line);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .row.top .rank{color:var(--accent)}
+  .who{min-width:0}
+  .who b{display:block;font-weight:600;font-size:1.05rem;letter-spacing:-.01em}
+  .who small{display:block;color:var(--ink-60);font-size:.79rem}
+  .amount{
+    font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.4rem;
+    font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1;
+  }
+  .amount.null{color:var(--green)}
+  .chev{
+    width:8px;height:8px;border-right:2px solid var(--ink-60);
+    border-bottom:2px solid var(--ink-60);transform:rotate(45deg);
+    transition:transform .18s ease;justify-self:end;margin-bottom:3px;
+  }
+  .row.open .chev{transform:rotate(225deg);margin-bottom:-3px}
+  .detail{display:none;border-top:1px solid var(--field);padding:2px 14px 13px}
+  .row.open .detail{display:block}
+  .item{
+    display:grid;grid-template-columns:1fr auto;gap:4px 12px;
+    padding:9px 0;border-bottom:1px solid var(--field);
+  }
+  .item:last-of-type{border-bottom:0}
+  .item .what{font-size:.92rem;line-height:1.3}
+  .item .when{font-size:.76rem;color:var(--ink-60);font-variant-numeric:tabular-nums}
+  .item .cost{
+    font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:1.05rem;
+    font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;
+  }
+  .tag{
+    display:inline-block;width:6px;height:6px;border-radius:50%;
+    margin-right:6px;vertical-align:middle;background:var(--ink-60);
+  }
+  .tag.green{background:var(--green)}
+  .tag.yellow{background:var(--yellow)}
+  .tag.red{background:var(--red)}
+  .note{
+    margin-top:9px;padding:8px 11px;border-radius:5px;
+    background:var(--field);border-left:3px solid var(--accent);
+    font-size:.84rem;color:var(--ink-60);
+  }
+  .note b{color:var(--ink);font-weight:600}
+  .empty{padding:16px;color:var(--ink-60);font-size:.9rem;text-align:center}
+
+  /* ---------- Katalog ---------- */
+  .langbar{display:flex;gap:6px;margin-bottom:14px}
+  .langbar button{
+    padding:6px 14px;border:1px solid var(--line);border-radius:20px;
+    background:var(--paper);font:inherit;font-size:.82rem;font-weight:500;
+    color:var(--ink-60);cursor:pointer;
+  }
+  .langbar button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .langbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .rate{
+    background:var(--ink);color:#fff;border-radius:6px;padding:11px 14px;
+    margin-bottom:10px;font-family:"Barlow Condensed",sans-serif;
+    font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;
+  }
+  .rules{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .rule{
+    display:grid;grid-template-columns:26px 1fr auto;gap:4px 12px;
+    padding:11px 14px;border-bottom:1px solid var(--field);align-items:baseline;
+  }
+  .rule:last-child{border-bottom:0}
+  .rule .no{
+    font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.98rem;
+    color:var(--ink-60);font-variant-numeric:tabular-nums;
+  }
+  .rule .txt{font-size:.94rem;line-height:1.35}
+  .rule .pen{
+    font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:.98rem;
+    text-align:right;line-height:1.3;color:var(--accent);
+  }
+  .rule.g .no{color:var(--green)} .rule.y .no{color:var(--yellow)} .rule.r .no{color:var(--red)}
+
+  .creed{
+    margin-top:12px;background:var(--paper);border:1px solid var(--line);
+    border-left:3px solid var(--accent);border-radius:6px;padding:13px 15px;
+  }
+  .creed p{margin:0 0 9px;font-size:.9rem;line-height:1.45}
+  .creed p:last-child{margin:0}
+  .creed strong{font-weight:600}
+
+  .remarks{margin-top:20px}
+  .remarks h3{
+    font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.15rem;
+    text-transform:uppercase;letter-spacing:.08em;margin:16px 0 7px;
+  }
+  .remarks ul{margin:0;padding-left:18px;font-size:.9rem;line-height:1.5}
+  .remarks li{margin-bottom:5px}
+  .remarks ul ul{margin-top:5px;color:var(--ink-60)}
+
+  footer{
+    margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:.82rem;color:var(--ink-60);
+  }
+  footer p{margin:0 0 7px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="stripes"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="kicker">GTHGC · 1. Herren · 2. Bundesliga</p>
+    <h1>Strafenkasse</h1>
+    <div class="stand">
+      <div>Rückrunde 25/26<br>Stand <b id="stand">–</b> · 0,50 € pro Strafe</div>
+      <div class="pot">
+        <img src="data:image/png;base64,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" alt="Wappen Großflottbeker THGC">
+        <b id="pot">–</b>
+        <span>offen gesamt</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="pay">
+    <span class="lbl">Zahlung per PayPal</span>
+    <div class="payline">
+      <span class="adr" id="adr">maka1.herren@gmx.de</span>
+      <button id="copy" type="button">Kopieren</button>
+    </div>
+    <p class="hint">An <b>Freunde &amp; Familie</b> senden. Verwendungszweck: <b>Fines + dein Name</b>.</p>
+
+    <div class="maka">
+      <span class="lbl">Maka-Beitrag · monatlich</span>
+      <p>Der Mannschaftskassen-Beitrag ist <b>jeden Monat</b> fällig – unabhängig von den Strafen, über dieselbe PayPal-Adresse. Verwendungszweck: <b>Maka + Monat + dein Name</b>.</p>
+      <div class="tarife">
+        <div class="tarif"><b>5,00 €</b>Schüler &amp; Studenten</div>
+        <div class="tarif"><b>10,00 €</b>alle anderen</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-kasse"   aria-controls="p-kasse"   aria-selected="true">Kasse</button>
+    <button role="tab" id="tab-katalog" aria-controls="p-katalog" aria-selected="false">Strafenkatalog</button>
+  </div>
+
+  <section class="panel" id="p-kasse" role="tabpanel" aria-labelledby="tab-kasse">
+    <input class="search" id="search" type="search" placeholder="Namen suchen …" aria-label="Namen suchen">
+    <div id="list"></div>
+    <footer>
+      <p>Verstöße bucht nur die Kapitänsrunde. Fehler? Kurz melden, wird korrigiert.</p>
+      <p>Nicht gezahlte Strafen: +10 Strafen pro angefangenem Monat (Nr. 16).</p>
+    </footer>
+  </section>
+
+  <section class="panel" id="p-katalog" role="tabpanel" aria-labelledby="tab-katalog" hidden>
+    <div class="langbar">
+      <button id="lang-de" type="button" aria-pressed="true">Deutsch</button>
+      <button id="lang-en" type="button" aria-pressed="false">English</button>
+    </div>
+    <div id="katalog"></div>
+  </section>
+
+</div>
+
+<script>
+/* =========================================================================
+   DATENBLOCK — nur dieser Abschnitt wird bei Updates ausgetauscht.
+   strafen = Anzahl (× 0,50 €).  karte: "green" | "yellow" | "red" | ""
+   ========================================================================= */
+const STAND = "09.11.2026";
+
+const SPIELER = [
+  {
+    "name": "Klaudi",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Achraf",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (2 Minuten)",
+        "strafen": 2,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 18 · Emblem eines anderen Hamburger Hockeyvereins im Training (1 Teile)",
+        "strafen": 2,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 15b · Kleidungsstück komplett vergessen (Sonderfall zu Nr. 15) (1 Teile)",
+        "strafen": 30,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "William",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (6 Minuten)",
+        "strafen": 6,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (2 Minuten)",
+        "strafen": 2,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Leruo",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Johnny",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (2 Minuten)",
+        "strafen": 2,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Glassfaser",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Jan",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Samir",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "08.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (10 Minuten)",
+        "strafen": 10,
+        "karte": ""
+      },
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (3 Minuten)",
+        "strafen": 3,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 19 · Nicht-Orga-Nachrichten in der Orga-Gruppe („#Orga“ legitimiert nicht) (1 Nachrichten)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (20 Min.)",
+        "strafen": 20,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Dycke",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (1 Minuten)",
+        "strafen": 1,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Bench",
+    "bezahlt": false,
+    "hinweis": "Gemeinschaftskonto der Bank, kein einzelner Spieler.",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (4 Minuten)",
+        "strafen": 4,
+        "karte": ""
+      }
+    ],
+    "typ": "team"
+  },
+  {
+    "name": "Risky",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (1 Minuten)",
+        "strafen": 1,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 9 · Grüne Karte für Meckern / Ballspielen nach dem Pfiff",
+        "strafen": 25,
+        "karte": "g"
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 9 · Grüne Karte für Meckern / Ballspielen nach dem Pfiff",
+        "strafen": 25,
+        "karte": "g"
+      }
+    ]
+  },
+  {
+    "name": "Levi",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (6 Minuten)",
+        "strafen": 6,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Lasse",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Arne",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Jojo R.",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Raoul",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "05.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (15 Min.)",
+        "strafen": 15,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Lenn",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Gustav",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Düse",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Diede",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (2 Minuten)",
+        "strafen": 2,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Casper",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "16.09.2026",
+        "text": "Nr. 18 · Emblem eines anderen Hamburger Hockeyvereins im Training (1 Teile)",
+        "strafen": 2,
+        "karte": ""
+      },
+      {
+        "datum": "16.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (28 Minuten)",
+        "strafen": 28,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Michael",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Chipo",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (5 Minuten)",
+        "strafen": 5,
+        "karte": ""
+      },
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 9 · Grüne Karte für Meckern / Ballspielen nach dem Pfiff",
+        "strafen": 25,
+        "karte": "g"
+      }
+    ]
+  },
+  {
+    "name": "Linus",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "11.08.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (1 Minuten)",
+        "strafen": 1,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Jussi",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "11.08.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (1 Minuten)",
+        "strafen": 1,
+        "karte": ""
+      },
+      {
+        "datum": "29.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (3 Minuten)",
+        "strafen": 3,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Jakob",
+    "bezahlt": true,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 1 · Verspätung Training / Trainingsspiel (9 Minuten)",
+        "strafen": 9,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Marc",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  },
+  {
+    "name": "Justus H.",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": [
+      {
+        "datum": "30.09.2026",
+        "text": "Nr. 2 · Verspätung Spieltag (5 Min.)",
+        "strafen": 5,
+        "karte": ""
+      }
+    ]
+  },
+  {
+    "name": "Julian",
+    "bezahlt": false,
+    "hinweis": "",
+    "posten": []
+  }
+];
+
+const KATALOG = {
+  "de": {
+    "satz": "0,50 € pro Strafe",
+    "regeln": [
+      [
+        "1",
+        "Verspätung Training / Trainingsspiel",
+        "1 Strafe / Minute",
+        ""
+      ],
+      [
+        "2",
+        "Verspätung Spieltag",
+        "5 Strafen / angefangene 5 Min.",
+        ""
+      ],
+      [
+        "3",
+        "Fristen nicht eingehalten",
+        "5 Strafen / Tag",
+        ""
+      ],
+      [
+        "4",
+        "Unentschuldigtes Fehlen bei Pflichtterminen (inkl. Schiedsrichtereinsätzen)",
+        "100 Strafen",
+        ""
+      ],
+      [
+        "5",
+        "Handynutzung oder -klingeln während Besprechungen",
+        "10 Strafen",
+        ""
+      ],
+      [
+        "6",
+        "Verantwortungsaufgabe nicht erfüllt (Training / Trainingsspiel)",
+        "10 Strafen",
+        ""
+      ],
+      [
+        "7",
+        "Verantwortungsaufgabe nicht erfüllt (Spieltag)",
+        "30 Strafen",
+        ""
+      ],
+      [
+        "8",
+        "Verantwortungsaufgabe nicht erfüllt (Sonstiges)",
+        "20 Strafen",
+        ""
+      ],
+      [
+        "9",
+        "Grüne Karte für Meckern / Ballspielen nach dem Pfiff",
+        "25 Strafen",
+        "g"
+      ],
+      [
+        "10",
+        "Gelbe Karte für Foulspiel",
+        "40 Strafen",
+        "y"
+      ],
+      [
+        "11",
+        "Gelbe Karte für Meckern",
+        "100 Strafen",
+        "y"
+      ],
+      [
+        "12",
+        "Rote Karte",
+        "Grillen für die Mannschaft",
+        "r"
+      ],
+      [
+        "13",
+        "Falsche Kleidung Trainingsspiel (sobald ausgestattet)",
+        "5 Strafen / Teil",
+        ""
+      ],
+      [
+        "14",
+        "Falsche Kleidung Anreise Spieltag",
+        "10 Strafen / Teil",
+        ""
+      ],
+      [
+        "15",
+        "Falsche Kleidung Spieltag",
+        "20 Strafen / Teil",
+        ""
+      ],
+      [
+        "16",
+        "Strafen nicht bezahlt",
+        "10 Strafen / Monat",
+        ""
+      ],
+      [
+        "17",
+        "Parken am HW-Platz",
+        "5 Strafen",
+        ""
+      ],
+      [
+        "18",
+        "Emblem eines anderen Hamburger Hockeyvereins im Training",
+        "2 Strafen / Teil",
+        ""
+      ],
+      [
+        "19",
+        "Nicht-Orga-Nachrichten in der Orga-Gruppe („#Orga“ legitimiert nicht)",
+        "5 Strafen / Nachricht",
+        ""
+      ],
+      [
+        "20",
+        "Rauchen im Trikot oder mit Flottbek-Emblem",
+        "20 Strafen",
+        ""
+      ],
+      [
+        "21",
+        "Schlägerwerfen in Training / Trainingsspielen / Spielen",
+        "20 Strafen",
+        ""
+      ]
+    ],
+    "creed": [
+      "Die Kapitänsrunde behält sich Ergänzungen und Sonderregelungen vor.",
+      "<strong>Wir sind eine Mannschaft:</strong> Der Katalog beruht auf Zusammenarbeit und vereinbarten Verhaltensweisen. Es geht nicht darum, einander zu bestrafen, herabzusetzen oder gegeneinander zu arbeiten – sondern zum Beispiel darum, Sachen für andere mitzunehmen und Strafen proaktiv zu vermeiden."
+    ],
+    "remarks": [
+      {
+        "titel": "Verspätungen",
+        "punkte": [
+          {
+            "t": "Verspätungen sind der Mannschaft und den Trainern so früh wie möglich mitzuteilen – <u>mindestens 60 Minuten vor Beginn</u>.",
+            "sub": [
+              "Verkehr oder Probleme mit dem ÖPNV sind keine gültigen Entschuldigungen; in kritischen Fällen entscheiden Kapitäne und Trainer."
+            ]
+          },
+          {
+            "t": "Pünktlichkeit gilt für alle Termine und Treffpunkte – nicht nur fürs Training."
+          },
+          {
+            "t": "Pünktlich sein heißt: Aufwärmen um 18:45 Uhr ist nicht dasselbe wie Ankunft um 18:45 Uhr."
+          }
+        ]
+      },
+      {
+        "titel": "Kleidung",
+        "punkte": [
+          {
+            "t": "Bei Trainingsspielen wird in der Regel milde geurteilt, es sollte aber Flottbek-Kleidung sein."
+          },
+          {
+            "t": "Nr. 15: Spielen unter falschem Namen mit korrektem Trikot zählt als Kleidungsverstoß. Ein komplett vergessenes Kleidungsstück kostet 30 Strafen pro Teil."
+          }
+        ]
+      }
+    ]
+  },
+  "en": {
+    "satz": "0.50 € per fine",
+    "regeln": [
+      [
+        "1",
+        "Delay training / training match",
+        "1 fine / minute",
+        ""
+      ],
+      [
+        "2",
+        "Delay matchday",
+        "5 fines / started 5 min",
+        ""
+      ],
+      [
+        "3",
+        "Failure to meet deadlines",
+        "5 fines / day",
+        ""
+      ],
+      [
+        "4",
+        "Unexcused absence from mandatory appointments (incl. umpiring)",
+        "100 fines",
+        ""
+      ],
+      [
+        "5",
+        "Use or ringing of mobile phone during meetings",
+        "10 fines",
+        ""
+      ],
+      [
+        "6",
+        "Responsible task not fulfilled (training / training match)",
+        "10 fines",
+        ""
+      ],
+      [
+        "7",
+        "Responsible task not fulfilled (matchday)",
+        "30 fines",
+        ""
+      ],
+      [
+        "8",
+        "Responsible task not fulfilled (others)",
+        "20 fines",
+        ""
+      ],
+      [
+        "9",
+        "Green card for complaining / playing ball after whistle",
+        "25 fines",
+        "g"
+      ],
+      [
+        "10",
+        "Yellow card for fouling",
+        "40 fines",
+        "y"
+      ],
+      [
+        "11",
+        "Yellow card for complaining",
+        "100 fines",
+        "y"
+      ],
+      [
+        "12",
+        "Red card",
+        "BBQ for the team",
+        "r"
+      ],
+      [
+        "13",
+        "Wrong clothes training match (once equipped)",
+        "5 fines / piece",
+        ""
+      ],
+      [
+        "14",
+        "Wrong clothes travelling matchday",
+        "10 fines / piece",
+        ""
+      ],
+      [
+        "15",
+        "Wrong clothes matchday",
+        "20 fines / piece",
+        ""
+      ],
+      [
+        "16",
+        "Fines not paid",
+        "10 fines / month",
+        ""
+      ],
+      [
+        "17",
+        "Parking at the HW pitch",
+        "5 fines",
+        ""
+      ],
+      [
+        "18",
+        "Emblem of another Hamburg hockey club in training",
+        "2 fines / piece",
+        ""
+      ],
+      [
+        "19",
+        "Non-Orga messages to the orga group (“#Orga” doesn’t legitimize)",
+        "5 fines / message",
+        ""
+      ],
+      [
+        "20",
+        "Smoking in jersey or with Flottbek emblem",
+        "20 fines",
+        ""
+      ],
+      [
+        "21",
+        "Stick throwing in training / training matches / matches",
+        "20 fines",
+        ""
+      ]
+    ],
+    "creed": [
+      "The captains group reserves the right to make additions or special provisions.",
+      "<strong>We are a team:</strong> the spirit of the catalog is based on cooperation and agreed behaviours. It is not about punishing, denigrating or opposing each other – for example, taking things along for others and being proactive to avoid penalties."
+    ],
+    "remarks": [
+      {
+        "titel": "Delays",
+        "punkte": [
+          {
+            "t": "Announcements of delays should be communicated to the team and coaches as early as possible <u>(at least 60 min before the start)</u>.",
+            "sub": [
+              "Traffic issues or public transport problems are not valid excuses; captains and coaches decide in critical cases."
+            ]
+          },
+          {
+            "t": "Punctuality is expected for all appointments and meeting points – not just for training."
+          },
+          {
+            "t": "Arrive on time: e.g. warm-up 6:45 p.m. is not the same as arrival 6:45 p.m."
+          }
+        ]
+      },
+      {
+        "titel": "Clothes",
+        "punkte": [
+          {
+            "t": "For training matches, a mild judgment is generally applied, but it should be Flottbek clothing."
+          },
+          {
+            "t": "Reg No. 15: Playing under the wrong name with the correct jersey counts as a kit violation. Forgetting a kit entirely incurs a 30-fine penalty per piece."
+          }
+        ]
+      }
+    ]
+  }
+};
+
+
+/* ---------- Kasse rendern ---------- */
+const euro  = n => (n * 0.5).toLocaleString("de-DE",{style:"currency",currency:"EUR"});
+const summe = p => p.posten.reduce((a,v) => a + v.strafen, 0);
+const offen = p => !p.bezahlt && summe(p) > 0;
+
+document.getElementById("stand").textContent = STAND;
+document.getElementById("pot").textContent =
+  euro(SPIELER.filter(offen).reduce((a,p) => a + summe(p), 0));
+
+const sortiert = [...SPIELER].sort((a,b) => {
+  if (offen(a) !== offen(b)) return offen(a) ? -1 : 1;
+  return summe(b) - summe(a) || a.name.localeCompare(b.name,"de");
+});
+
+const list = document.getElementById("list");
+let rang = 0;
+
+sortiert.forEach(p => {
+  const total  = summe(p);
+  const schuld = offen(p);
+  if (schuld) rang++;
+
+  const row = document.createElement("div");
+  row.className = "row" + (schuld ? "" : " clear") + (schuld && rang <= 3 ? " top" : "");
+  row.dataset.name = p.name.toLowerCase();
+
+  const items = p.posten.map(v => `
+    <div class="item">
+      <div>
+        <div class="what"><span class="tag ${v.karte || ""}"></span>${v.text}</div>
+        <div class="when">${v.datum} · ${v.strafen} Strafen</div>
+      </div>
+      <div class="cost">${euro(v.strafen)}</div>
+    </div>`).join("");
+
+  const unterzeile = p.typ === "team"
+    ? "Mannschaftskonto"
+    : (p.bezahlt ? "bezahlt" : (total === 0 ? "nichts offen" : p.posten.length + " Positionen"));
+
+  row.innerHTML = `
+    <button class="head" aria-expanded="false">
+      <span class="rank">${schuld ? rang : "✓"}</span>
+      <span class="who"><b>${p.name}</b><small>${unterzeile}</small></span>
+      <span class="amount${schuld ? "" : " null"}">${euro(total)}</span>
+      <span class="chev"></span>
+    </button>
+    <div class="detail">
+      ${items || '<div class="empty">Keine Verstöße erfasst.</div>'}
+      ${p.hinweis ? `<div class="note"><b>Hinweis:</b> ${p.hinweis}</div>` : ""}
+    </div>`;
+
+  const btn = row.querySelector(".head");
+  btn.addEventListener("click", () => {
+    const auf = row.classList.toggle("open");
+    btn.setAttribute("aria-expanded", auf);
+  });
+
+  list.appendChild(row);
+});
+
+document.getElementById("search").addEventListener("input", e => {
+  const q = e.target.value.trim().toLowerCase();
+  let treffer = 0;
+  document.querySelectorAll("#list .row").forEach(r => {
+    const zeigen = r.dataset.name.includes(q);
+    r.style.display = zeigen ? "" : "none";
+    if (zeigen) treffer++;
+  });
+  document.querySelectorAll("#list > .empty").forEach(n => n.remove());
+  if (!treffer) {
+    const d = document.createElement("div");
+    d.className = "empty";
+    d.textContent = "Niemand gefunden.";
+    list.appendChild(d);
+  }
+});
+
+
+/* ---------- Katalog rendern ---------- */
+function zeigeKatalog(sprache){
+  const k = KATALOG[sprache];
+  const regeln = k.regeln.map(([nr,txt,pen,farbe]) => `
+    <div class="rule ${farbe}">
+      <span class="no">${nr}</span>
+      <span class="txt">${txt}</span>
+      <span class="pen">${pen}</span>
+    </div>`).join("");
+
+  const remarks = k.remarks.map(r => `
+    <h3>${r.titel}</h3>
+    <ul>${r.punkte.map(p => `
+      <li>${p.t}${p.sub ? `<ul>${p.sub.map(s => `<li>${s}</li>`).join("")}</ul>` : ""}</li>`).join("")}
+    </ul>`).join("");
+
+  document.getElementById("katalog").innerHTML = `
+    <div class="rate">${k.satz}</div>
+    <div class="rules">${regeln}</div>
+    <div class="creed">${k.creed.map(c => `<p>${c}</p>`).join("")}</div>
+    <div class="remarks">${remarks}</div>`;
+
+  document.getElementById("lang-de").setAttribute("aria-pressed", sprache === "de");
+  document.getElementById("lang-en").setAttribute("aria-pressed", sprache === "en");
+}
+zeigeKatalog("de");
+document.getElementById("lang-de").addEventListener("click", () => zeigeKatalog("de"));
+document.getElementById("lang-en").addEventListener("click", () => zeigeKatalog("en"));
+
+
+/* ---------- Reiter ---------- */
+document.querySelectorAll('.tabs button').forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll('.tabs button').forEach(t => {
+      const aktiv = t === tab;
+      t.setAttribute("aria-selected", aktiv);
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !aktiv;
+    });
+    window.scrollTo({ top:0, behavior:"smooth" });
+  });
+});
+
+
+/* ---------- PayPal-Adresse kopieren ---------- */
+const copyBtn = document.getElementById("copy");
+copyBtn.addEventListener("click", async () => {
+  const text = document.getElementById("adr").textContent.trim();
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const t = document.createElement("textarea");
+    t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+    document.body.appendChild(t); t.select();
+    try { document.execCommand("copy"); } catch {}
+    t.remove();
+  }
+  copyBtn.textContent = "Kopiert";
+  copyBtn.classList.add("ok");
+  setTimeout(() => { copyBtn.textContent = "Kopieren"; copyBtn.classList.remove("ok"); }, 1800);
+});
+</script>
+</body>
+</html>
